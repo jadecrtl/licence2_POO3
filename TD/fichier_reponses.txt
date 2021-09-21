@@ -1,27 +1,47 @@
 1) Exercices obligatoires
     Exercice 1:
-    1) A l'exécution de Test on obtient dans le terminal
+    1) A l'exécution de Test on obtient dans le terminal :
+    
+    Je m’appelle : Tony Parker. J’ai 29 ans.
+    Je m’appelle : Mickael Parker. J’ai 29 ans.
 
-    2)
+    2) On ne peut pas exécuter les lignes suivantes car le champ nom est privé et il n'y a pas de setter qui a été crée.
+    Donc pour éviter de modifier les visibilités des attributs de la classe on crée un setter pour le nom.
+    Il est en effet pas utile que l'attribut age soit public car on a pas besoin de le connaître hors de la classe Personne.
 
-    3)
+    3) Si le main avait été écrit dans la classe Personne alors on aurait pu écrire mickael.nom = "Gelabale"; car en etant dans la classe directement on a accés au attribut qui sont privés.
 
     Exercice 2:
-    1)
+    1)on crée private int monnaie.
+    On crée un champ supplémentaire dans le constructeur en initialisant la valeur de notre monnaie à 0.
+    On crée un getter et une méthode ajouter et soustraire de l'argent.
 
-    2)
+    2)Voir dans le fichier Personne.java et Test.java
 
-    3)
+    3)La méthode qui me sent la plus judicieuse est celle de donne(p, montant). Car on précise en appelant la fonction déjà une personne et en utilisant l'autre méthode donne(p1, p2, montant) on écrit 2 fois le même nom.
 
     Exercice 3:
-    Le code suivant affiche
+    Le code suivant affiche :
+
+    1) Egal     Ils comparent la valeur des 2 attributs
+    2) Egal     Pareil 
+    3) Egal     Pareil
+    4) Egal     Ils ont la meme adresse mémoire
+    5) Egal     Pareil
+    6) Different    Pas la meme adresse mémoire
+    7) Different    Pareil pas la meme adresse mémoire
+    8) attribut:2 
+    9) attribut:2 
 
     Exercice 4:
-    1)
+    1) Non on ne peut pas écrire une expression qui compare la variable de type int à la valeur null car null n'existe pas en int il y a 0 mais 0 est différent de null.
 
-    2)
+    2)int taille = 0;
+      int[] = new int[taille];
 
-    3)
+      ou aussi on peut écrire int[] = new int[0];
+
+    3)Voir les 2 constructeurs dans le fichier A.java
 
     4)
 
