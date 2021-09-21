@@ -40,6 +40,10 @@ public class A {
             System.out.println((obj2 == obj3) ? "Egal" : "Different");
             System.out.println(obj.toString());
             System.out.println(obj);
+
+
+        A[] t = new A[10];
+        for(int i = 0; i<t.length; i++) System.out.println(t[i]);
     }    
 }
 

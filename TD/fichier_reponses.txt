@@ -34,7 +34,7 @@
     9) attribut:2 
 
     Exercice 4:
-    1) Non on ne peut pas écrire une expression qui compare la variable de type int à la valeur null car null n'existe pas en int il y a 0 mais 0 est différent de null.
+    1) Non on ne peut pas écrire une expression qui compare la variable de type int à la valeur null car null n'existe pas en int il y a 0 mais 0 est différent de null ils sont de types différent car null est une référence.
 
     2)int taille = 0;
       int[] = new int[taille];
@@ -43,10 +43,15 @@
 
     3)Voir les 2 constructeurs dans le fichier A.java
 
-    4)
+    4)Ca affiche 10 fois null mais si on fait t[0].toString() alors on a une exception.
 
     Exercice 5:
     On souhaite préciser dans le code suivant sur la feuille de TD les méthodes qui relèvent d'une classe ou d'une instance puis de remplir le code selon les commentaires. Soit :
+
+    a relève de classe car il est statique donc à chaques créations d'objets il se créera.
+    b relève d'une instance car il est ni static ni final donc il dépend directement de l'objet.
+    c relève de la classe car il est final peu importe les objets qui seront crées il ne changera jamais.
+
 
     Exercice 6:
     
