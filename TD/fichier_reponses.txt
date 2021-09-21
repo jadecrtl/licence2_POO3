@@ -1,0 +1,32 @@
+1) Exercices obligatoires
+    Exercice 1:
+    1) A l'exécution de Test on obtient dans le terminal
+
+    2)
+
+    3)
+
+    Exercice 2:
+    1)
+
+    2)
+
+    3)
+
+    Exercice 3:
+    Le code suivant affiche
+
+    Exercice 4:
+    1)
+
+    2)
+
+    3)
+
+    4)
+
+    Exercice 5:
+    On souhaite préciser dans le code suivant sur la feuille de TD les méthodes qui relèvent d'une classe ou d'une instance puis de remplir le code selon les commentaires. Soit :
+
+    Exercice 6:
+    
