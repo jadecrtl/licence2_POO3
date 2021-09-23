@@ -22,12 +22,18 @@ class Exercice2 {
     }
 
     public static int[] split(int[] t) {
-        int a = t.length;
+        String c = "";
+        int a = 0;
         for (int i=0; i<t.length; i++) {
             String b = String.valueOf(t[i]);
             a += b.length();
+            c += String.valueOf(t[i]);
         }
-        return null;
+        int[] t2 = new int[a];
+        for (int j=0; j<t2.length; j++) {
+            t2[j] = Character.getNumericValue(c.charAt(j));
+        }
+        return t2;
     }
 
 
