@@ -1,0 +1,10 @@
+1)Le type d'entrée est command lines argument et le type de retour est void.
+
+2) 
+public static void main(String[] args) {
+    System.out.println("Le nombre de para est" + args.length);
+}
+
+3) int length
+
+4) La methode hypot appartient à la classe Math ou StrictMath.
