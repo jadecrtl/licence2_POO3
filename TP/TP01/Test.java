@@ -13,6 +13,8 @@ public class Test {
         int[] t = {2,12,36,7};
         System.out.println(Arrays.toString(Exercice2.split(t)));
 
+        String[] t3 = {"Jade"};
+        Exercice3.affiche(Exercice3.Shift(t3));
 
     }
 }
