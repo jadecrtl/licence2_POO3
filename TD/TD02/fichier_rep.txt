@@ -1,41 +1,73 @@
 Exercice 1 :
-1)
-2)
+
+1)Si on crée une méthode h statique on a juste accés aux attributs statique de la classe A or si on crée une méthode h non statique (qui est donc dynamique) alors on peut avoir accés aux attributs a et b.
+
+2)Le programme affiche :
+    u: a=4; b=1
+    v: a=5; b=1
+    u: a=6; b=2
 
 Exercice 2 :
+
 1)
+
 2)
 
 Exercice 3 :
+
 1)
+
 2)
+
 3)
+
 4)
+
 5)
+
 6)
 
 Exercice 4 :
+
 1)
+
 2)
+
 3)
+
 4)
+
 5)
 
 Si on a le temps :
+
 Exercice 5:
+
 1)
+
 2)
+    
     a)
+    
     b)
+    
     c)
+    
     d)
+    
     e)
+    
     f)
 
+
 Exercice 6 :
+
 1)
+
 2)
+
 3)
+
 4)
 
 Exercice 7 :
