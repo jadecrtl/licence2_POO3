@@ -9,9 +9,11 @@ Exercice 1 :
 
 Exercice 2 :
 
-1)
+1)Le code suivant va retourner 0.
 
-2)
+2)Le code suivant va retourner 5.
+
+3)Le code suivant va retourner k = 0 et l = 5;
 
 Exercice 3 :
 
