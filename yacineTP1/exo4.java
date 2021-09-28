@@ -46,7 +46,7 @@ public class exo4 {
 	
 	public static void main(String[] args) {
 		exo4 a = new exo4();
-		//System.out.println(a.question());
-		System.out.println("Votre note est "+a.evaluation(7)+"/20");
+		System.out.println(a.question());
+		//System.out.println("Votre note est "+a.evaluation(7)+"/20");
 	}
 }
