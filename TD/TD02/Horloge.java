@@ -11,7 +11,11 @@ public class Horloge {
         heure = new CompteurCyclique(24, h);
     }
 
-    public void TicTac() {
-        if (minute)
-    }
+
+    //Je ne sais pas ce que le prof a marqué après minute. et heure.
+    /*public void TicTac() {
+        if (minute.max) {
+            heure.max();
+        }
+    }*/
 }
