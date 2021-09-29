@@ -27,4 +27,24 @@ public class Exercice4 {
         System.out.println("Bonne réponse!");
         return compte;
     }
+
+    public static int evaluation(int n) {
+        Random rd = new Random();
+		Scanner sc = new Scanner(System.in);
+		int note = 20;
+		
+		for(int i=0; i<n; i++) {
+			int a = rd.nextInt(10);
+			int b = rd.nextInt(10);
+			System.out.println("Combien font " + a + "*" + b + " ?");
+			int res = sc.nextInt();
+			if(res != a*b) {
+				note--;
+			}
+		}
+		return note;
+    }
+
+
+
 }
