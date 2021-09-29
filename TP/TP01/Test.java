@@ -17,8 +17,11 @@ public class Test {
         Exercice3.affiche(Exercice3.Shift(t3));
 
         Exercice4 A = new Exercice4();
-        System.out.println(A.question());
-        System.out.println(A.evaluation(2));
+        //System.out.println(A.question());
+        //System.out.println(A.evaluation(2));
 
+
+        Informations a = new Informations(15, 12, 17);
+        System.out.println(a.toString());
     }
 }
