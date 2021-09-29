@@ -26,6 +26,18 @@ public class Informations {
         return force;
     }
 
+    public void setVitalite(int vitalite) {
+        this.vitalite = vitalite;
+    }
+
+    public void setForce(int force) {
+        this.force = force;
+    }
+
+    public void setAgilite(int agilite) {
+        this.agilite = agilite;
+    }
+
     public String toString() {
         return "Le perso a " + this.vitalite + " de points de vitalité et a " + this.force + " de points de force et pour finir a " + this.agilite + " de points d'agilité.";
     }
