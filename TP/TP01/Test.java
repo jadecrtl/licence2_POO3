@@ -2,9 +2,9 @@ import java.util.Arrays;
 
 public class Test {
     public static void main(String[] args) {
-        //System.out.println("Le nombre d'arguments mis en paramètres est" + args.length);
-        //int[] array = new int[2];
-        //Exercice2.affiche(array);
+        System.out.println("Le nombre d'arguments mis en paramètres est" + args.length);
+        int[] array = new int[2];
+        Exercice2.affiche(array);
 
         int[] t1 = {1, 2, 4, 7};
         int[] t2 = {2, 3, 2};
@@ -17,11 +17,9 @@ public class Test {
         Exercice3.affiche(Exercice3.Shift(t3));
 
         Exercice4 A = new Exercice4();
-        //System.out.println(A.question());
-        //System.out.println(A.evaluation(2));
+        System.out.println(A.question());
+        System.out.println(A.evaluation(2));
 
 
-        Informations a = new Informations(15, 12, 17);
-        System.out.println(a.toString());
     }
 }
