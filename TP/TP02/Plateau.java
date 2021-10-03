@@ -53,5 +53,20 @@ public class Plateau {
         return n;
     }
 
+    public void afficheTout() {
+		System.out.println("Mines : "+this.nbMines+" / Drapeaux : "+this.nbDrapeaux);
+		for(int i = 1; i < this.hauteur+1;i++) {
+			for(int j=1; j < this.largeur+1; j++) {
+				if(this.placeMines[i][j]) {
+					System.out.print("* ");
+				} else {
+					System.out.print(this.adja[i][j]+" ");
+				}
+			}
+			System.out.print("\n");
+		}
+    }
+
+
 
 }
