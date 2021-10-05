@@ -10,7 +10,7 @@ public class Plateau {
     private int[][] etats;
     private int[][] adja;
 
-    public Plateau (int largeur, int hauteur, int nbMines, int nbDrapeaux) {
+    public Plateau (int largeur, int hauteur, int nbMines) {
         this.hauteur = hauteur;
         this.largeur = largeur;
         this.nbMines = nbMines;
@@ -18,6 +18,8 @@ public class Plateau {
         this.placeMines = new boolean[this.hauteur+2][this.largeur+2];
         this.etats = new int[this.hauteur+2][this.largeur+2];
         this.adja = new int [this.hauteur+2][this.largeur+2];
+        this.ajouteMinesAlea();
+        this.calculeAdjacence();
     }
 
     private void ajouteMinesAlea() {
@@ -67,6 +69,9 @@ public class Plateau {
 		}
     }
 
+    public void revelerCase() {
+        
+    }
 
 
 }
