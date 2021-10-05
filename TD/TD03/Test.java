@@ -14,5 +14,11 @@ public class Test {
         System.out.println(n2);
         Personne n3 = new Roturier("Jean Castex");
         System.out.println(n3);
+
+        Societe france = new Societe(20);
+        System.out.println(france.nbPaysans());
+        
+        System.out.println(france.argentTotal());
+        
     }    
 }

@@ -9,7 +9,7 @@ public class Noble extends Personne{
     }
 
     public boolean donnerArgent(int i) {
-        super.setArgent(super.getArgent()-i);
+        setArgent(getArgent()-i);
         return true;
     }
 }
