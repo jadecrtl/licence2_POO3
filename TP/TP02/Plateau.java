@@ -69,9 +69,72 @@ public class Plateau {
 		}
     }
 
-    public void revelerCase() {
-        
+    public void revelerCase(int x, int y) {
+        if (x < 1 || x > this.hauteur || y < 1 || y > this.largeur) {
+            System.out.println("Hors jeu!!");
+            return;
+        }
+        if (this.etats[x][y] == this.adja[x][y]) {
+            System.out.println("La case est déjà révélée.");
+            return;
+        }
+        this.etats[x][y] = this.adja[x][y];
     }
 
+    public void drapeauCase(int x, int y) {
+        if (this.etats[x][y] > 8) {
+            this.etats[x][y] -= 10;
+            nbDrapeaux--;
+        }
+        else {
+            this.etats[x][y] += 10;
+            nbDrapeaux++;
+        }
+    }
+
+    public void afficheCourant() {
+        for (int i=1; i<this.hauteur+1; i++) {
+            for (int j=1; j<this.largeur+1; j++) {
+                if (this.etats[i][j] == -1) {
+                    System.out.println(". ");
+                }
+                else if (this.etats[i][j] > 8) {
+                    System.out.println("? ");
+                }
+                else if (this.placeMines[i][j]){
+                    System.out.println("* ");
+                }
+                else {
+                    System.out.println(this.etats[i][j]+" ");
+                }
+            }
+            System.out.println("");
+        }
+    }
+
+    public boolean jeuPerdu() {
+        for (int i=1; i<hauteur+1; i++) {
+            for (int j=1; j<largeur+1; j++) {
+                if (this.placeMines[i][j] && this.etats[i][j] > -1 || this.etats[i][j] < 9) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public boolean jeuGagne() {
+        for (int i=1; i<hauteur+1; i++) {
+            for (int j=1; j<largeur+1; j++) {
+                if (this.placeMines[i][j] && this.etats[i][j] > -1 || this.etats[i][j] < 9) {
+                    return false;
+                }
+                if (this.placeMines[i][j] && this.etats[i][j] <= -1 || this.etats[i][j] >= 9) {
+                    return false;
+                }
+            }
+        }
+        return true;        
+    }
 
 }

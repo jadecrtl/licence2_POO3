@@ -103,8 +103,10 @@ public class Plateau {
 	public void drapeauCase(int x, int y) {
 		if(this.etats[x][y] > 8) {
 			this.etats[x][y] -= 10;
+			nbDrapeaux--;
 		} else {
 			this.etats[x][y] += 10;
+			nbDrapeaux++;
 		}
 	}
 	
@@ -142,8 +144,8 @@ public class Plateau {
 	}
 	
 	public boolean jeuGagne() {
-		for(int i = 0; i < this.hauteur+1; i++) {
-			for(int j=0; j < this.largeur+1; j++) {
+		for(int i = 1; i < this.hauteur+1; i++) {
+			for(int j=1; j < this.largeur+1; j++) {
 				if(this.mines[i][j] && this.etats[i][j] > -1 && this.etats[i][j] < 9) {
 					return false;
 				}
