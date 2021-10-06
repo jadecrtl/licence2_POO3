@@ -78,8 +78,8 @@ public class Plateau {
     }
 
     public void revelerCase(int x, int y) {
-        if (x < 1 || x > this.hauteur || y < 1 || y > this.largeur) {
-            System.out.println("Hors jeu!!");
+        if (x < 1 || x > this.hauteur || y < 1 || y > this.largeur) {//Correspond aux cases rajouté autour du plateau pour la
+            System.out.println("Hors jeu!!");//fonction calculeAdjacence
             return;
         }
         if (this.etats[x][y] == this.adja[x][y]) {
@@ -89,9 +89,9 @@ public class Plateau {
         this.etats[x][y] = this.adja[x][y];
     }
 
-    public void drapeauCase(int x, int y) {
-        if (this.etats[x][y] > 8) {
-            this.etats[x][y] -= 10;
+    public void drapeauCase(int x, int y) {//le max que peut contenir une case est 8 s'il y a que des mines autour
+        if (this.etats[x][y] > 8) {//donc si la case est supérieur à 8 alors c'est un drapeau
+            this.etats[x][y] -= 10;//décrémenter de 10 revient à la valeur initiale qui est -1 quand elle n'est pas révélée
             nbDrapeaux--;
         }
         else {
@@ -133,12 +133,12 @@ public class Plateau {
     }
 
     public boolean jeuGagne() {
-        for (int i=1; i<hauteur+1; i++) {
-            for (int j=1; j<largeur+1; j++) {
+        for (int i=1; i<this.hauteur+1; i++) {
+            for (int j=1; j<this.largeur+1; j++) {
                 if (this.placeMines[i][j] && this.etats[i][j] > -1 && this.etats[i][j] < 9) {
                     return false;
                 }
-                if (this.placeMines[i][j] && this.etats[i][j] <= -1 || this.etats[i][j] >= 9) {
+                if (!this.placeMines[i][j] && this.etats[i][j] <= -1 || this.etats[i][j] >= 9) {
                     return false;
                 }
             }
