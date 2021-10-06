@@ -1,7 +1,6 @@
 import java.util.Random;
 
 public class Plateau {
-    
     private int largeur;
     private int hauteur;
     private int nbMines;
@@ -102,19 +101,20 @@ public class Plateau {
     }
 
     public void afficheCourant() {
+		System.out.println("Mines : " + this.nbMines + " / Drapeaux : " + this.nbDrapeaux);
         for (int i=1; i<this.hauteur+1; i++) {
             for (int j=1; j<this.largeur+1; j++) {
                 if (this.etats[i][j] == -1) {
-                    System.out.println(". ");
+                    System.out.print(". ");
                 }
                 else if (this.etats[i][j] > 8) {
-                    System.out.println("? ");
+                    System.out.print("? ");
                 }
                 else if (this.placeMines[i][j]){
-                    System.out.println("* ");
+                    System.out.print("* ");
                 }
                 else {
-                    System.out.println(this.etats[i][j]+" ");
+                    System.out.print(this.etats[i][j]+" ");
                 }
             }
             System.out.println("");
@@ -124,7 +124,7 @@ public class Plateau {
     public boolean jeuPerdu() {
         for (int i=1; i<hauteur+1; i++) {
             for (int j=1; j<largeur+1; j++) {
-                if (this.placeMines[i][j] && this.etats[i][j] > -1 || this.etats[i][j] < 9) {
+                if (this.placeMines[i][j] && this.etats[i][j] > -1 && this.etats[i][j] < 9) {
                     return true;
                 }
             }
@@ -135,7 +135,7 @@ public class Plateau {
     public boolean jeuGagne() {
         for (int i=1; i<hauteur+1; i++) {
             for (int j=1; j<largeur+1; j++) {
-                if (this.placeMines[i][j] && this.etats[i][j] > -1 || this.etats[i][j] < 9) {
+                if (this.placeMines[i][j] && this.etats[i][j] > -1 && this.etats[i][j] < 9) {
                     return false;
                 }
                 if (this.placeMines[i][j] && this.etats[i][j] <= -1 || this.etats[i][j] >= 9) {

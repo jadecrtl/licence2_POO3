@@ -10,6 +10,10 @@ public class Joueur {
         this.scanReponse = new Scanner(System.in);
     }
 
+    public String getNom() {
+        return this.nom;
+    }
+
     public void setNom(String nom) {
         this.nom = nom;
     }
@@ -24,7 +28,7 @@ public class Joueur {
 		if(jouer.equals("oui")) {
 			return true;
 		}
-		else if(jouer.equals("non")) {
+		if(jouer.equals("non")) {
 			return false;
 		}
 		return this.veutJouer();
@@ -82,7 +86,7 @@ public class Joueur {
 		return res;
     }
 
-    
+
 
 
 }

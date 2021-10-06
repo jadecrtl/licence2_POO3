@@ -1,15 +1,15 @@
 public class Lanceur {
-
     public static void main(String[] args) {
-        System.out.println("Bienvenu sur le jeu du Démineur!!");
-        Plateau p = new Plateau(8,8,10);
-        p . afficheTout ();        
-
-
-
-
+        Joueur j = new Joueur();
+        j.setNom(j.demanderNom());
+        while(j.veutJouer()) {
+            int[] dimensions = j.demanderDimensions();
+            int nbMines = j.demanderNbMines();
+            Plateau p = new Plateau(dimensions[0], dimensions[1], nbMines);
+            Jeu jouer = new Jeu(j, p);
+            jouer.jouer();
+            p.afficheTout();
+        }
+        j.finish();
     }
-
-
-
 }
