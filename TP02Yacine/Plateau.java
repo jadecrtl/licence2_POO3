@@ -25,7 +25,7 @@ public class Plateau {
 	private void etatsInit() {
 		for(int i = 1; i < this.hauteur+1; i++) {
 			for(int j = 1; j < this.largeur+1; j++) {
-				this.etats[i][j] = -1;
+				this.etats[i][j] = -1; //toutes les cases sont initialisées à -1
 			}
 		}
 	}
