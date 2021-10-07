@@ -1,7 +1,7 @@
 public class Dame extends Piece{
     
     public Dame(boolean couleur) {
-        super(couleur, "Dame");
+        super(couleur, "dame");
     }
 
 
