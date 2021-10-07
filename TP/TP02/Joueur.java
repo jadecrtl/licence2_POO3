@@ -75,14 +75,14 @@ public class Joueur {
 		System.out.println("Entrez les coordonnées de la case à relevée (sous la forme 'B6') ?");
 		String coordonnes = this.scanReponse.next();
 		for(int i = 0; i < alpha.length; i++) {
-			if(coordonnes.charAt(0) == alpha[i]) {
+			if(coordonnes.charAt(0) == alpha[i]) {//est ce que le 1er caractère de ce qui a été écrit est dans le tableau de char alpha
 				res[0] = i+1;
 			}
 		}
-		if(res[0] == 0) {
+		if(res[0] == 0) {//Si res[0] = 0 ça veut dire que ce qui a été écrit ne correspond pas aux lettres du tableau de char alpha
 			return this.demanderCoordonnes();
 		}
-		res[1] = Character.getNumericValue(coordonnes.charAt(1));
+		res[1] = Character.getNumericValue(coordonnes.charAt(1));//transformer le 2eme caractère en nombre
 		return res;
     }
 
