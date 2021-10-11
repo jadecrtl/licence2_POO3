@@ -18,7 +18,7 @@ public class Case {
     }
 
     public boolean estVide() {
-        if (this.getPiece() == null) {//si la case est vide alors on retourne true sinon false
+        if (this.getPiece()==null) {//si la case est vide alors on retourne true sinon false
             return true;
         }
         return false;
@@ -40,7 +40,7 @@ public class Case {
         if (this.getPiece() != null) {
             return String.valueOf(piece.toString().charAt(0));
         }
-        else {
+        else{
             if (this.couleurCase == true) {
                 return "-";
             }
@@ -48,7 +48,11 @@ public class Case {
                 return "*";
             }
         }
+        
     }
 
+
+
+    
 
 }
