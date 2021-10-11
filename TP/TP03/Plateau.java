@@ -4,15 +4,17 @@ public class Plateau {
     private int largeur;
     private Case[][] cases;
         
-    public Plateau(int largeur, int longueur) {
-        this.cases = new Case[largeur][longueur];
+    public Plateau(int longueur, int largeur) {
+        this.longueur = longueur;
+        this.largeur = largeur;
+        this.cases = new Case[longueur][largeur];
         boolean couleurAlter = true;
-        for (int i=0; i<this.largeur; i++) {
-            for (int j=0; j<this.longueur; j++) {
+        for (int i=0; i<this.longueur; i++) {
+            for (int j=0; j<this.largeur; j++) {
                 cases[i][j] = new Case(couleurAlter);
                 couleurAlter = !couleurAlter;
             }
-            if (largeur%2 == 0) {
+            if (longueur%2 == 0) {
                 couleurAlter = !couleurAlter;
             }
         }
@@ -24,7 +26,7 @@ public class Plateau {
     */
 
     public boolean horsLimite(int x, int y) {
-        if(x < 0 || x > this.largeur && y < 0 || y > this.longueur) {
+        if(x < 0 || x > this.longueur && y < 0 || y > this.largeur) {
             return true;
         }
         return false;
@@ -58,11 +60,11 @@ public class Plateau {
     //Une méthode qui affiche le plateau (utiliser la méthode toString() de Case ).
     public void afficher() {
         System.out.println("Bienvenue sur la partie d'échecs!!!");
-        for (int i=0; i<this.largeur; i++) {;
-            for (int j=0; j<this.longueur; j++) {
-                this.cases[i][j].toString();
+        for (int i=0; i<this.longueur; i++) {;
+            for (int j=0; j<this.largeur; j++) {
+                System.out.print(this.cases[i][j].toString());
             }
-            System.out.println();
+            System.out.print("\n");
         }
     }
 

@@ -18,37 +18,34 @@ public class Case {
     }
 
     public boolean estVide() {
-        if (this.getPiece()==null) {//si la case est vide alors on retourne true sinon false
+        if (this.piece ==null) {//si la case est vide alors on retourne true sinon false
             return true;
         }
         return false;
     }
     
     public void remplirPiece(Piece p) {
-        if (this.getPiece() == null) {
+        if (this.estVide()) {
             this.piece = p;
         }
     }
 
     public void enleverPiece() {
-        if (this.getPiece() != null) {
+        if (this.estVide()) {
             this.piece = null;
         }
     }
 
     public String toString() {
-        if (this.getPiece() != null) {
-            return String.valueOf(piece.toString().charAt(0));
+        if(this.estVide() && this.couleurCase) {
+            return "- ";
         }
-        else{
-            if (this.couleurCase == true) {
-                return "-";
-            }
-            else {
-                return "*";
+        else {
+            if(this.estVide() && !this.couleurCase) {
+                return "* ";
             }
         }
-        
+        return this.piece.toString().charAt(0)+" ";
     }
 
 
