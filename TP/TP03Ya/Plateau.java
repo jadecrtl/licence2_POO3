@@ -1,10 +1,10 @@
 
-public class PlateauYa {
+public class Plateau {
 	private int longueur;
 	private int largeur;
 	private Case[][] c;
 	
-	public PlateauYa(int longueur, int largeur) {
+	public Plateau(int longueur, int largeur) {
 		this.longueur = longueur;
 		this.largeur = largeur;
 		c = new Case[longueur][largeur];
@@ -34,9 +34,9 @@ public class PlateauYa {
 		return false;
 	}
 	
-	//public boolean horsLimite(Deplacement d) {
-	//	return this.horsLimite(d.getX1(), d.getY1());
-	//}
+	public boolean horsLimite(Deplacement d) {
+		return this.horsLimite(d.getX1(), d.getY1());
+	}
 	
 	public Case getCase(int x, int y) {
 		return this.c[x][y];

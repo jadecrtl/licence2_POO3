@@ -103,17 +103,15 @@ public class Test {
         echecs.remplirCase(1, 1, pionN2);
         echecs.remplirCase(1, 2, pionN3);
         echecs.remplirCase(1, 3, pionN4);
-        echecs.remplirCase(2, 0, tourB1);
-        echecs.remplirCase(2, 1, dameB);
-        echecs.remplirCase(2, 2, roiB);
-        echecs.remplirCase(2, 3, tourB2);
-        echecs.remplirCase(3, 0, pionB1);
-        echecs.remplirCase(3, 1, pionB2);
-        echecs.remplirCase(3, 2, pionB3);
-        echecs.remplirCase(3, 3, pionB4);
+        echecs.remplirCase(2, 0, pionB1);
+        echecs.remplirCase(2, 1, pionB2);
+        echecs.remplirCase(2, 2, pionB3);
+        echecs.remplirCase(2, 3, pionB4);
+        echecs.remplirCase(3, 0, tourB1);
+        echecs.remplirCase(3, 1, dameB);
+        echecs.remplirCase(3, 2, roiB);
+        echecs.remplirCase(3, 3, tourB2);
         echecs.afficher();
-
-
 
     }
 }
