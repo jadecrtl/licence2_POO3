@@ -23,6 +23,20 @@ public class Piece {
         return this.nomPiece.substring(0,1).toUpperCase()+" ";
     }
 
+	public boolean estValide(Deplacement d, Plateau p) {
+		if(p.horsLimite(d)) {
+			return false;
+		}
+		if(d.typeDeplacement() == 'x') {
+			return false;
+		}
+		if(p.getCase(d.getX1(), d.getY1()).getPiece() != null) {
+			if(p.getCase(d.getX1(), d.getY1()).getPiece().couleur == this.couleur) {
+				return false;
+			}
+		}
+		return true;
+	}
 
 
 }

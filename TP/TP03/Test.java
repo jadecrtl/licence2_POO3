@@ -113,5 +113,9 @@ public class Test {
         echecs.remplirCase(3, 3, tourB2);
         echecs.afficher();
 
+        System.out.println("**********************");
+
+        
+
     }
 }

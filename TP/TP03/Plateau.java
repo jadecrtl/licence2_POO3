@@ -32,6 +32,11 @@ public class Plateau {
         return false;
     }
     
+    public boolean horsLimite(Deplacement d) {
+		return this.horsLimite(d.getX1(), d.getY1());
+	}
+
+
     /*
         - Un getter public Case getCase(int x,int y) qui renvoie la Case
         de coordonnées x et y, ainsi que les méthodes suivantes
