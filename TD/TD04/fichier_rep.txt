@@ -1,0 +1,66 @@
+Exercice 1 : 
+
+1)Le résultat de new C(); est Hello et le résultat de new D(); va afficher une erreur car on doit
+  passer en paramêtre un int x.
+
+2)On peut définir la classe E car il y a un constructeur bien défini dans C mais F ne peut pas être défini car il n'y a pas de constructeur par défaut dans D.
+
+Exercice 2 :
+
+On a les objets suivants :
+A a = new A();
+B b = new B();
+A c = new B();
+
+Qu'affichent les instructions suivantes ?
+
+a.g(); c'est un objet de A donc dans g on a f(new A()) donc affiche A.f(a)
+b.g(); c'est un objet de B donc avec la extend il va dans g qui est dans la classe A et fait f(new A()) donc affiche B.f(a)
+c.g(); c'est un objet de A donc dans g on a f(new A()) donc affiche B.f(a)
+
+a.f(a); A.f(A)
+a.f(b); A.f(A)
+a.f(c); A.f(A)
+b.f(a); B.f(A)
+b.f(b); B.f(B)
+b.f(c); B.f(A)
+c.f(a); B.f(A)
+c.f(b); B.f(A)
+c.f(c); B.f(A)
+
+Que deviennent les questions précédentes si les classes A et B sont définies comme suit?
+
+
+Exercice 3 :
+
+Voir les classes Plante, PlanteFleurie et Test
+
+Exercice 4 :
+
+1)
+
+2)
+
+3)
+
+4)
+
+5)
+
+6)
+
+
+Si on a le temps :
+
+Exercice 5 :
+
+1)
+
+2)
+
+3)
+
+4)
+
+5)
+
