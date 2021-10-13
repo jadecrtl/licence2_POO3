@@ -31,7 +31,7 @@ public class Case {
     }
 
     public void enleverPiece() {
-        if (this.estVide()) {
+        if (!this.estVide()) {
             this.piece = null;
         }
     }

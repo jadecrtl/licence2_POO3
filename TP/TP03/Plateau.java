@@ -8,16 +8,23 @@ public class Plateau {
         this.longueur = longueur;
         this.largeur = largeur;
         this.cases = new Case[longueur][largeur];
-        boolean couleurAlter = true;
-        for (int i=0; i<this.longueur; i++) {
-            for (int j=0; j<this.largeur; j++) {
-                cases[i][j] = new Case(couleurAlter);
-                couleurAlter = !couleurAlter;
-            }
-            if (longueur%2 == 0) {
-                couleurAlter = !couleurAlter;
-            }
-        }
+        for(int i=0; i < longueur; i++) {
+			for(int j=0; j < largeur; j++) {
+				if(i % 2 == 1) {
+					if(j%2 == 1) {
+						this.cases[i][j] = new Case(false);
+					} else {
+						this.cases[i][j] = new Case(true);
+					}	
+				} else {
+					if(j%2 == 0) {
+						this.cases[i][j] = new Case(false);
+					} else {
+						this.cases[i][j] = new Case(true);
+					}	
+				}
+			}
+		}
     }
     
     /*
@@ -64,10 +71,9 @@ public class Plateau {
 
     //Une méthode qui affiche le plateau (utiliser la méthode toString() de Case ).
     public void afficher() {
-        System.out.println("Bienvenue sur la partie d'échecs!!!");
         for (int i=0; i<this.longueur; i++) {;
             for (int j=0; j<this.largeur; j++) {
-                System.out.print(this.cases[i][j].toString());
+                System.out.print(this.cases[i][j]);
             }
             System.out.print("\n");
         }
