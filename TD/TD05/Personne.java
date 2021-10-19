@@ -1,6 +1,6 @@
 public class Personne {
     protected String nom ;
-    private int argent;
+    protected int argent;
     protected int pdv;//les points de vie de la personne
     
     public Personne ( String nom, int argent, int pdv ) {
