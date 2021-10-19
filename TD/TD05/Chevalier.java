@@ -1,6 +1,7 @@
 public class Chevalier extends Noble{
     
     protected Personne geolier;
+    private static final int prixLiberte = 50;
 
     public Chevalier (String nom, int argent, int pdv) {
         super(nom, argent, pdv);
@@ -16,7 +17,15 @@ public class Chevalier extends Noble{
         }
     }
     
-    
+    public boolean acheteLiberte() {
+        if (this.getArgent() > Chevalier.prixLiberte) {
+            this.geolier.gain(Chevalier.prixLiberte);
+            this.perte(Chevalier.prixLiberte);
+            this.geolier = null;
+            return true;
+        }        
+        return false;
+    }
 
     
 }

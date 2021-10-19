@@ -16,7 +16,12 @@ public class Fantassin extends Roturier{
     }
     
     public void attaque(Personne p) {
-        p.blessure(0);
+        if (p instanceof Chevalier) {
+            ((Chevalier)p).captureBy(this);
+        }
+        else {
+            p.blessure(degats);
+        }
     }
 
 
