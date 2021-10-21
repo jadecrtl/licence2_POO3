@@ -1,4 +1,3 @@
-
 public class Manga extends Livre {
 	private String genre;
 	

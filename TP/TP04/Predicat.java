@@ -1,4 +1,3 @@
-
 public class Predicat {
 	
 	boolean estVrai(Media m) {

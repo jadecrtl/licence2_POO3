@@ -1,4 +1,3 @@
-
 public class DictionnaireBilingue extends Dictionnaire {
 	private String langue2;
 	

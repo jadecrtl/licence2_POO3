@@ -1,4 +1,3 @@
-
 public class EstUnLivre extends Predicat {
 	
 	boolean estVrai(Media m) {

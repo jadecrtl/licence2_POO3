@@ -1,4 +1,3 @@
-
 public class Dictionnaire extends Media {
 	private String langue;
 	private int nbTomes;

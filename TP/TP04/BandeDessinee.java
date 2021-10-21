@@ -1,4 +1,3 @@
-
 public class BandeDessinee extends Livre {
 	private String type;
 	

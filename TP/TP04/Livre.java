@@ -1,4 +1,3 @@
-
 public class Livre extends Media {
 	private String auteur;
 	private int nbPages;

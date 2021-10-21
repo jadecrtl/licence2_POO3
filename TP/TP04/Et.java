@@ -1,4 +1,3 @@
-
 public class Et extends Predicat {
 	private Predicat p1;
 	private Predicat p2;
