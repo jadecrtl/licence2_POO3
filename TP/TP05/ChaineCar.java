@@ -1,11 +1,14 @@
 public class ChaineCar{
+    String carac;
 
-    public static int len() {
-        return 0;
+    public int len() {
+        int len=0;
+        return len;
     }
 
     public String toString() {
-        return "";
+        String l="";
+        return l;
     }
 
 }
