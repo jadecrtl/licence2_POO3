@@ -1,0 +1,35 @@
+Exo 2 
+Classe abstraite
+interface 
+class
+
+                                                ______________________
+                                                |Instruments         |
+                                                |String nom          |
+                                                |abstract void play()|
+                                                ______________________
+                                                 ^                  ^
+                                                /                    \
+                                               /                      \
+                                       |IMeca|<                        >|IElec|
+                                       ^
+                                      /
+                                     /
+                                    /
+                                   /
+                    |Cordes     |<
+                    |int NbCorde|             
+
+                                                
+
+
+Voir photo ALexandre.pdf
+
+
+
+
+
+class Piano extends CFrappes implements AMec, Clavier
+class Saxophone extends VBois implements AMec
+class GuitareElec extends CPincées implements AElec 
+class PianoSynthetique extends IElec implements AElec, Clavier

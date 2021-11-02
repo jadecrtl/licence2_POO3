@@ -3,7 +3,7 @@ Exo 1:
 1)On ne peut ni instancier une interface ni une classe abstraite.
 
 2)On ne peut pas mettre de constructeur dans une interface mais on peut dans une classe abstraite.
-On peut y mettre un constructeur avec un corps et donc un bloc exemple :
+On peut y mettre un constructeur avec un corps et donc un bloc, exemple :
 class Test {
     for (int i=0; i<3; i++) {
         System.out.println(i);
