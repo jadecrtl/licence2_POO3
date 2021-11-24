@@ -1,0 +1,54 @@
+Exercice 1 :
+
+1)
+
+checked -> On doit les declarer, avec un try catch.
+erreurs que le programmeur doit prévoir (ex : erreur dans
+la lecture d'un périphérique). Elles doivent explicitement être
+traitées, sans quoi erreur à la compilation.
+unchecked -> pas besoin de les declarer explicitement
+(c à dire de les capturer ou les déclarer avec un throw). Ce sont des
+exceptions evitables par des tests.
+
+Checked : Classes qui dérivent de Exception, mais pas de
+RuntimeException :
+■ erreurs qui dépendent de conditions externes (I/O, fichiers,
+réseaux,…)
+□ Unchecked : Classes qui dérivent de RuntimeException
+■ Mauvais fonctionnement du programme (bugs) : situation
+d’erreur qui ne devrait jamais être atteinte (erreur du
+programmeur)
+■ En général évitables avec des tests (i.e pointeur null, index
+supérieure à la dernière position d’un tableau, etc…)
+■ Les exceptions de ce type sont souvent capturées uniquement
+pour garantir une sortie “gentille” du programme
+
+2) (unchecked) NullPointerException <- RuntimeException <- Exception
+   (unchecked) ArrayIndexOutOfBoundsException <- IndexOutOfBoundsException <- RuntimeException <- Exception
+   (checked)   IOException <- Exception
+   
+3) Oblige à mettre la fonction dans un bloc try catch
+lorsqu'on veut l'executer. Que ce soit checked ou unchecked
+
+unchecked -> evite de rajouter des tests.
+checked -> evite de mettre des try catch dans la fonction.
+
+4) Uniquement si une des exceptions qui vient d'être levé dans
+le try(1) est capturé dans le catch(2). Alors, le code en (3)
+sera executé.
+
+Exercice 2:
+
+1) CallF -> Catch f()
+2) CallF -> Catch f()
+3) CallG -> Catch g()
+4) CallF -> Catch f()
+5) CallH -> Catch h()
+6) Finally
+7) Catch f(), Finally
+8) Finally
+
+Exercice 3 :
+
+
+

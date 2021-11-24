@@ -1,5 +1,6 @@
 public class Lanceur {
     public static void main(String[] args) {
+        System.out.println("Bienvenue sur le jeu du démineur!");
         Joueur j = new Joueur();//création d'un joueur
         j.setNom(j.demanderNom());//modification du nom
         while(j.veutJouer()) {//tant que le joueur dit qu'il veut jouer (commencer une partie)

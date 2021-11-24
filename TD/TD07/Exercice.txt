@@ -1,0 +1,72 @@
+Exercice 1 :
+
+1) Pour A.java on a :
+
+Une classe static ne peut reconnaître que des éléments static donc elle ne peut pas utiliser i qui n'est pas un attribut static. Ligne 11 fausse du coup.
+
+L'erreur de la ligne 11 est : non-static variable.cannot be referenced from a static content
+
+Puis ligne 17 ça ne marche pas car une classe interne non static ne peut pas contenir des attributs static.
+
+L'erreur de la ligne 17 est : Illegal static declaration in inner class AB.
+
+L'erreur de la ligne 22 est : non-static variable nstat cannot be referenced from a static-content
+    Correction de la ligne 22 : A.StaticA n = new A.StaticA();
+                                int j = n.nstat;
+
+L'erreur de la ligne 23 est : non-static variable x cannot be referenced from a static-content
+    Correction de la ligne 23 : A.x.b => A a = new A(); k = a.x.b;
+
+Pour l'erreur 24 c'est la même que la 17.
+L'erreur de la ligne 24 est : Illegal static declaration in inner class A.InstanceA 
+
+2) Pour D.java on a :
+
+Ligne 38 : local variables referenced from in inner class must be final or effectively final
+Quand on est dans une classe interne parfois on aura envie d'accéder et de modifier les variables de la classe au dessus mais vu que j = i on veut pas modifier i car on peut avoir à l'utiliser après. Le problème vient du fait que le compilateur veut connaître la valeur de la variable avant l'execution
+
+Ligne 56 : non-static variable nstat cannot be referenced from a static content 
+Lignes 58, 60, 62 C'est les mêmes erreurs que la ligne de 56
+ligne 63 private access
+Ligne 64 affiche "6 4 2"
+Ligne 65 private access
+Ligne 69 affiche "1"
+
+Exercice 2 :
+
+1) Une classe de niveau supérieur est statique
+   Une classe membre est non-statique
+
+Exercice 3 :
+
+1) 
+private class EvenIterator implements DatasIterator {
+    int i = 0;
+    public boolean hasNext() {
+        return i < SIZE--;
+    }
+    public Integer next() {
+        i += 2;
+        return monTableau[i];
+    }
+}
+
+public void p
+
+2)
+
+3)
+
+Exercice 4 :
+
+1)
+
+2)
+    a)
+
+    b)
+
+    c)
+
+
+

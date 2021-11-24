@@ -11,7 +11,6 @@ public class Exercice4 {
         int b = rd.nextInt(10);
         int res = a * b;
         int compte = 1;
-
         System.out.println("Combien font " + a + " * " + b);
         int val = sc.nextInt();
         if (val == res) {

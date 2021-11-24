@@ -17,7 +17,7 @@ public class Personnage {
     }
 
     public boolean estVivant() {
-        if (this.etatInitial.getVitalite() > 0) {
+        if (this.etatActuel.getVitalite() > 0) {
             return true;
         }
         return false;

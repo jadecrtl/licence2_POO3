@@ -1,0 +1,18 @@
+1)Dans la méthode main le type d'entrée est :
+    
+    command lines argument 
+  
+  Dans la méthode main le type de retour est :
+    
+    void
+
+2)Voici un programme qui affiche le nombre d’arguments donnés en entrée :
+    
+    public static void main(String[] args) {
+        System.out.println("Le nombre de para est" + args.length);
+    }
+
+3)Voici une méthode dans la classe String pour calculer la taille d’une chaine de carac-
+tères:  int length
+
+4) La methode hypot appartient à la classe Math ou StrictMath.
