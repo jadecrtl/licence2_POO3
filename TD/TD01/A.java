@@ -44,6 +44,7 @@ public class A {
 
         A[] t = new A[10];
         for(int i = 0; i<t.length; i++) System.out.println(t[i]);
+        //System.out.println(t[0].toString()); affiche une exception NullPointerException
     }    
 }
 
