@@ -15,6 +15,9 @@ public class Test {
         ChangePseudoHistory h_ab = new ChangePseudoHistory();
         ChangePseudoHistory h_bc = new ChangePseudoHistory();
 
+        //Pour Exo 2
+        //Pseudo<String> a = new Pseudo<>("a");
+
         a.addObs(h_ab);        
         b.addObs(h_ab);        
         b.addObs(h_bc);        
