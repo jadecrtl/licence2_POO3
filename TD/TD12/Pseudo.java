@@ -46,9 +46,32 @@ public class Pseudo<T> {
         content = nouvContent;
     }
 }
-
-
 */
 
+/*Correction Exo 3
+import java.util.LinkedList;
+import java.util.List;
+
+public class Pseudo<T> extends Observable{
+    private T content;
+    private List<ChangePseudoHistory<T>> observateurs;
+    
+    public Pseudo(T content) {
+        this.content = content;
+        observateurs = new LinkedList<>();
+    }
+
+    public void addObs(ChangePseudoHistory obs) {
+        observateurs.add(obs);
+    }
+
+    public void set(T nouvContent) {
+        T old = content;
+        content = nouvContent;
+        setChanged();
+        notifyObservers(old);
+    }
+}
+*/
 
 
