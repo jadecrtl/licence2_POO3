@@ -1,0 +1,97 @@
+Exercice 2 :
+
+1) Le code suivant :
+   
+    Vector<A> l;
+    Vector<B> m = new Vector<B>();
+    l = m;
+
+ne compile pas car B hérite de A mais Vector<B> n'hérite pas de Vector<A>.
+
+Voici un exemple illustrant la nécessité que ce code soit rejeté par le compilateur :
+
+    l.add(new A());
+
+2) Vector<? extends A> hérite de Vector<A>
+
+3) La syntaxe est :
+
+    public <C extends A>C methode(C objet)
+
+4)
+    Exemple pour mieux comprendre :
+    
+    Vector <Noble> noble = new Vector<Noble>();
+
+    Personne p = nobles.getLast();//marche car on sait qu'on va retourner un noble qui est une personne on peut assigner un sous-type
+    
+    Duc d = noble.getLast();//marche pas car il se peut qu'il peut y avoir pas que ce sous-type la
+    
+    nobles.add(new Duc());//marche car Duc est un sous type de noble donc il peut utiliser les méthodes de Noble
+    
+    noble.add(new Personne());//marche pas car on peut pas mettre une personne dans un noble car le noble a des méthodes spécifiques propre à son type que la personne n'a pas
+    
+    Maintenant on considère les deux morceaux de code suivants :
+
+    Le code ci-dessous ne compile pas.
+
+    Vector<A> m = new Vector<A>();
+    m.add(new A());
+    Vector<? extends A> l = m;
+    l.add(new A());//On peut pas ajouter A car le type des elements du Vector peut etre une sous classe stricte de A
+
+    Le code ci-dessous compile.
+
+    Vector<A> m = new Vector<A>();
+    m.add(new A());
+    Vector<? extends A> l = m;
+    A a = l.get(0);//La on peut car l'objet est forcement un sous-type de A donc on peut le ranger dans un objet de type A
+
+Exercice 3 :
+
+oui | static void affiche(Vector<?> vector) {
+oui |   for(Objet o : vector) {
+non |       System.out.println(o.toString());
+        }
+      }
+
+Pour compteElement(K clef, ...) :
+
+Soit :
+
+static<K, T extends AUneClef<K>> int compteElement(K clef, Vector<T>) {
+    int compteur = 0;
+    for (T e.vector) {
+        if (e.getClef().equals(clef)) 
+            compteur++;
+    }
+    return compteur;
+}
+
+Ou soit :
+
+static<K> int compteElement(K clef, Vector<? extends AUneClef<K>>) {
+    int compteur = 0;
+    for (AUneClef<K> e : vector) {
+        if (e.getClef().equals(clef)) {
+            compteur;
+        }
+    }
+    return compteur;
+}
+
+Pour double sommeClefs(...) :
+
+Soit :
+
+static<K extends Number, T extends AUneClef<K>> double sommeClefs(Vector<T> v) {
+
+}
+
+Ou soit :
+
+static double sommeClefs (Vector<? extends AUneClef<? extends Number>>) {
+
+}
+
+static<U, T extends U> Vector<U> convertit (Vector<T> v)
